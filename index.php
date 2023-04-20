@@ -143,7 +143,7 @@ if(isset($_POST['authenticator_get'], $_POST['authenticator_username'], $_POST['
       if(isInstalled($bdd) == true) {
         printError('OpenVPN-admin is already installed. Redirection.');
         header( "refresh:3;url=index.php?admin" );
-        exit(-1);
+        //exit(-1);
       }
 
       // If the user sent the installation form
@@ -168,7 +168,7 @@ if(isset($_POST['authenticator_get'], $_POST['authenticator_username'], $_POST['
           }
           catch (PDOException $e) {
             printError($e->getMessage());
-            exit(1);
+            //exit(1);
           }
 
           unlink($sql_file);
